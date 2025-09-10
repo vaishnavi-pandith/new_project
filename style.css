@@ -1,149 +1,137 @@
-/* ===( CODE AASHU )=== */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-image: url(bg.jpg);
-  background-size: cover;
-  background-position: center;
-  animation: animateBg 5s linear infinite;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080?city,night,neon') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-@keyframes animateBg{
-  100%{
-    filter: hue-rotate(360deg);
-  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.login-box{
-  position: relative;
-  width: 400px;
-  height: 450px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .5);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(15px);
+.login-form {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    color: #fff;
 }
 
-h2{
-  font-size: 2em;
-  color: #fff;
-  text-align: center;
+.login-form h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.input-box{
-  position: relative;
-  width: 310px;
-  margin: 30px 0;
-  border-bottom: 2px solid #fff;
-}
-
-.input-box label{
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 1em;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label{
-  top: -5px;
-}
-
-.input-box input{
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  color: #fff;
-  padding: 0 35px 0 5px;
-}
-
-.input-box .icon{
-  position: absolute;
-  right: 8px;
-  color: #fff;
-  font-size: 1.2em;
-  line-height: 57px;
-}
-
-.remember-forget{
-  margin: -15px 0 15px;
-  font-size: .9em;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-}
-
-.remember-forget label input{
-  margin: right 3px;
-}
-
-.remember-forget a{
-  color: #fff;
-  text-decoration: none;
-}
-
-.remember-forget a:hover{
-  text-decoration: underline;
-}
-
-button{
-  width: 100%;
-  height: 40px;
-  background: #fff;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 1em;
-  color: #000;
-  font-weight: 500;
-}
-
-.register-link{
-  font-size: .9em;
-  color: #fff;
-  text-align: center;
-  margin: 25px 0 10px;
-}
-
-.register-link p a{
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-link p a:hover{
-  text-decoration: underline;
-}
-
-@media (max-width:360px){
-  .login-box{
+.input-group {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
     border: none;
-    border-radius: 0;
-  }
-  .input-box{
-    width: 290px;
-  }
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.options {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.options label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.options a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.register-link {
+    font-size: .9em;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
 }
